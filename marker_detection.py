@@ -22,6 +22,9 @@ while True:
             corners = corners.reshape(4,2)
             corners = corners.astype(int)
             top_right = corners[0].ravel()
+            top_left = corners[1].ravel()
+            bottom_right = corners[2].ravel()
+            bottom_left = corners[3].ravel()
             cv.putText(frame, f"id: {ids[0]}", top_right, cv.FONT_HERSHEY_PLAIN, 1.3, (0,255,0), 2, cv.LINE_AA)
 
     print(marker_IDs)
